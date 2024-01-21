@@ -21,8 +21,9 @@ nz-content {
 
 .ant-layout-content{
   padding-inline: 24px;
-  padding-bottom: 24px;
   padding-top: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
 }
 
 .inner-content {
@@ -51,7 +52,7 @@ nz-affix{
   margin-inline: 24px;
   border-radius: 23px;
 
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.9);
   -webkit-backdrop-filter: blur(24px);
   backdrop-filter: blur(24px);
   transition: background-color .2s ease;
@@ -68,6 +69,7 @@ nz-affix{
   height: 36px;
   width: 36px;
   margin-left: 6px;
+  cursor: pointer;
 }
 
 .app-title{
@@ -76,4 +78,10 @@ nz-affix{
   margin-left: 10px;
   font-weight: 600;
   color: rgb(129, 24, 54);
+  user-select: none;
+  cursor: pointer;
+}
+
+.ant-menu-horizontal {
+  border-bottom: 1px solid transparent;
 }

@@ -3,10 +3,10 @@
     <nz-affix [nzOffsetTop]="20">
       <nz-header>
         <div class="app-header">
-          <span class="header-icon">
+          <span class="header-icon" [routerLink]="['/inicio']">
             <span nz-icon nzType="crown" nzTheme="outline"></span>
           </span>
-          <p class="app-title">Reina Pepiada</p>
+          <p class="app-title" [routerLink]="['/inicio']">Reina Pepiada</p>
 
           <ul nz-menu  nzMode="horizontal" style="margin-left: auto; margin-right: 20px;">
             <li nz-menu-item [nzSelected]="router.isActive('inicio', true)" [routerLink]="['/inicio']" >

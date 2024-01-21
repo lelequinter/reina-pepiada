@@ -6,9 +6,8 @@ import { IconDefinition } from '@ant-design/icons-angular';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzAffixModule } from 'ng-zorro-antd/affix';
-import { CrownOutline } from '@ant-design/icons-angular/icons';
+import { CrownOutline, HomeOutline, HeartOutline, ShoppingCartOutline, ShopOutline } from '@ant-design/icons-angular/icons';
 
-const icons: IconDefinition[] = [ CrownOutline ];
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -26,8 +25,10 @@ const icons: IconDefinition[] = [ CrownOutline ];
 export class AppComponent {
   private readonly iconSvc = inject(NzIconService);
 
+  icons: IconDefinition[] = [ CrownOutline, HomeOutline, HeartOutline, ShopOutline, ShoppingCartOutline ];
+
   constructor(){
-    this.iconSvc.addIcon(CrownOutline);
+    this.iconSvc.addIcon(...this.icons);
   }
 
 }

@@ -34,7 +34,7 @@ nz-affix{
 .ant-layout-header{
   background: transparent;
   height: 47px;
-  line-height: 47px;
+  line-height: normal;
 }
 
 .app-header {
@@ -42,20 +42,33 @@ nz-affix{
   align-items: center;
   position: relative;
   height: 47px;
-  padding: 0;
-  background: #fff;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
   margin-inline: 24px;
   border-radius: 23px;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(24px);
+  backdrop-filter: blur(24px);
+  transition: background-color .2s ease;
+}
+
+.header-icon{
+  display: grid;
+  place-content: center;
+  background: #dbab9f;
+  color: #b7234c;
+  font-size: 24px;
+  padding: 5px;
+  border-radius: 999px;
+  height: 36px;
+  width: 36px;
+  margin-left: 6px;
 }
 
 .app-title{
   margin: 0;
-}
-
-.header-trigger {
-  padding: 0px 10px 3px 20px;
-  font-size: 20px;
-  cursor: pointer;
-  transition: all .3s,padding 0s;
+  font-size: large;
+  margin-left: 10px;
+  font-weight: 600;
+  color: rgb(129, 24, 54);
 }

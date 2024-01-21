@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { NzIconModule, NzIconService } from 'ng-zorro-antd/icon';
 import { IconDefinition } from '@ant-design/icons-angular';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
@@ -17,12 +17,14 @@ import { CrownOutline, HomeOutline, HeartOutline, ShoppingCartOutline, ShopOutli
     NzIconModule,
     NzLayoutModule,
     NzMenuModule,
+    RouterModule,
     RouterOutlet,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  public readonly router = inject(Router);
   private readonly iconSvc = inject(NzIconService);
 
   icons: IconDefinition[] = [ CrownOutline, HomeOutline, HeartOutline, ShopOutline, ShoppingCartOutline ];

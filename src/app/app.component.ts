@@ -7,6 +7,7 @@ import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzAffixModule } from 'ng-zorro-antd/affix';
 import { CrownOutline, HomeOutline, HeartOutline, ShoppingCartOutline, ShopOutline } from '@ant-design/icons-angular/icons';
+import { routeTransitionAnimations } from './route-transition-animations';
 
 @Component({
   selector: 'app-root',
@@ -21,7 +22,8 @@ import { CrownOutline, HomeOutline, HeartOutline, ShoppingCartOutline, ShopOutli
     RouterOutlet,
   ],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  animations: [routeTransitionAnimations]
 })
 export class AppComponent {
   public readonly router = inject(Router);
@@ -31,6 +33,10 @@ export class AppComponent {
 
   constructor(){
     this.iconSvc.addIcon(...this.icons);
+  }
+
+  prepareRoute(outlet: RouterOutlet) {
+    return outlet && outlet.activatedRouteData && outlet.activatedRouteData['animationState'];
   }
 
 }

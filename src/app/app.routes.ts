@@ -6,9 +6,28 @@ import { ProductosComponent } from './pages/productos/productos.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: '/inicio' },
-  { path: 'inicio', component: InicioComponent },
-  { path: 'sobre-nosotros', component: SobreNosotrosComponent },
-  { path: 'carrito', component: CarritoComponent },
-  { path: 'productos', component: ProductosComponent },
-  { path: '**', redirectTo: '/inicio' },
+  {
+    path: 'inicio',
+    component: InicioComponent,
+    data: { animationState: 'inicio' }
+  },
+  {
+    path: 'productos',
+    component: ProductosComponent,
+    data: { animationState: 'productos' }
+  },
+  {
+    path: 'sobre-nosotros',
+    component: SobreNosotrosComponent,
+    data: { animationState: 'sobre' }
+  },
+  {
+    path: 'carrito',
+    component: CarritoComponent,
+    data: { animationState: 'carrito' }
+  },
+  {
+    path: '**',
+    redirectTo:'/inicio'
+  },
 ];

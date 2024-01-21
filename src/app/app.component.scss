@@ -19,11 +19,16 @@ nz-content {
   margin: 24px;
 }
 
-.inner-content {
-  padding: 24px;
+.ant-layout-content{
+  padding-inline: 24px;
+  padding-bottom: 24px;
   padding-top: 10px;
+}
+
+.inner-content {
   background: transparent;
   height: 100%;
+  overflow: hidden;
 }
 
 nz-affix{

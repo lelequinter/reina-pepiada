@@ -4,11 +4,11 @@ import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { NzIconModule, NzIconService } from 'ng-zorro-antd/icon';
 import { IconDefinition } from '@ant-design/icons-angular';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzMenuDirective, NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzAffixModule } from 'ng-zorro-antd/affix';
-import { CrownOutline, HomeOutline, HeartOutline, ShoppingCartOutline, ShopOutline } from '@ant-design/icons-angular/icons';
+import { CrownOutline, HomeOutline, HeartOutline, ShoppingCartOutline, ShopOutline, MenuOutline } from '@ant-design/icons-angular/icons';
 import { routeTransitionAnimations } from './route-transition-animations';
-
+import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -20,6 +20,7 @@ import { routeTransitionAnimations } from './route-transition-animations';
     NzMenuModule,
     RouterModule,
     RouterOutlet,
+    NzDropDownModule,
   ],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
@@ -29,7 +30,7 @@ export class AppComponent {
   public readonly router = inject(Router);
   private readonly iconSvc = inject(NzIconService);
 
-  icons: IconDefinition[] = [ CrownOutline, HomeOutline, HeartOutline, ShopOutline, ShoppingCartOutline ];
+  icons: IconDefinition[] = [ CrownOutline, HomeOutline, HeartOutline, ShopOutline, ShoppingCartOutline, MenuOutline ];
 
   constructor(){
     this.iconSvc.addIcon(...this.icons);

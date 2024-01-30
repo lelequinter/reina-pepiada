@@ -8,7 +8,7 @@
           </span>
           <p class="app-title" [routerLink]="['/inicio']">Reina Pepiada</p>
 
-          <ul nz-menu  nzMode="horizontal" style="margin-left: auto; margin-right: 20px;">
+          <ul nz-menu nzMode="horizontal">
             <li nz-menu-item [nzSelected]="router.isActive('inicio', true)" [routerLink]="['/inicio']" >
               <span nz-icon nzType="home" nzTheme="outline"></span>
               Inicio
@@ -28,6 +28,30 @@
           </ul>
 
           <!-- todo: Hacer el menu desplegable para pequeñas resoluciones -->
+          <span class="menu-dropdown" nz-dropdown [nzDropdownMenu]="menu" nzPlacement="bottomRight" [nzOverlayStyle]="{'marginTop': '20px', 'borderRadius': '10px', 'overflow': 'hidden'}">
+            <span nz-icon nzType="menu" nzTheme="outline"></span>
+          </span>
+
+          <nz-dropdown-menu #menu="nzDropdownMenu">
+            <ul nz-menu nzMode="vertical">
+              <li nz-menu-item [nzSelected]="router.isActive('inicio', true)" [routerLink]="['/inicio']" >
+                <span nz-icon nzType="home" nzTheme="outline"></span>
+                Inicio
+              </li>
+              <li nz-menu-item [nzSelected]="router.isActive('productos', true)" [routerLink]="['/productos']" >
+                <span nz-icon nzType="shop" nzTheme="outline"></span>
+                Productos
+              </li>
+              <li nz-menu-item [nzSelected]="router.isActive('sobre-nosotros', true)" [routerLink]="['/sobre-nosotros']" >
+                <span nz-icon nzType="heart" nzTheme="outline"></span>
+                Sobre nosotros
+              </li>
+              <li nz-menu-item [nzSelected]="router.isActive('carrito', true)" [routerLink]="['/carrito']" >
+                <span nz-icon nzType="shopping-cart" nzTheme="outline"></span>
+                Carrito
+              </li>
+            </ul>
+          </nz-dropdown-menu>
         </div>
       </nz-header>
     </nz-affix>

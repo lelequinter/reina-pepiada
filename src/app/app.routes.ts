@@ -16,6 +16,7 @@ export const routes: Routes = [
     component: ProductosComponent,
     data: { animationState: 'productos' }
   },
+  //todo: agregar ruta de detalles de producto
   {
     path: 'sobre-nosotros',
     component: SobreNosotrosComponent,

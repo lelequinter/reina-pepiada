@@ -1,4 +1,29 @@
 
-<div style="background-color: blue; height: 100vh; width: 100%;" ></div>
-<div style="background-color: violet; height: 100vh; width: 100%;" ></div>
-<div style="background-color: red; height: 100vh; width: 100%;" ></div>
+<section class="carousel-wrapper">
+  <nz-carousel nzAutoPlay>
+    @for (index of array; track index) {
+      <div nz-carousel-content>
+        <span>{{ index }}</span>
+      </div>
+    }
+  </nz-carousel>
+</section>
+
+<section >
+  <h2>Productos</h2>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center;">
+    @for (item of [1,2,3,4,5,6,7,8]; track item) {
+      <nz-card nzHoverable style="width:240px" [nzCover]="coverTemplate">
+        <nz-card-meta nzTitle="Europe Street beat" nzDescription="www.instagram.com"></nz-card-meta>
+        <ng-template #coverTemplate>
+          <img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />
+        </ng-template>
+      </nz-card>
+    }
+  </div>
+</section>
+
+<section>
+  <h2>Contactanos</h2>
+</section>

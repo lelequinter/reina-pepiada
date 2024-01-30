@@ -1,0 +1,39 @@
+[nz-carousel-content] {
+  text-align: center;
+  height: 160px;
+  line-height: 160px;
+  background: #364d79;
+  color: #fff;
+  overflow: hidden;
+  width: max-content;
+}
+
+span {
+  color: #fff;
+  margin-bottom: 0;
+  user-select: none;
+}
+
+.carousel-wrapper{
+  max-height: calc(100vh - 25px);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  width: 100%;
+}
+
+h2{
+  margin: 10px 0;
+  font-size: large;
+  margin-left: 10px;
+  font-weight: 600;
+  color: rgb(129, 24, 54);
+  user-select: none;
+  cursor: pointer;
+}
+
+:host::ng-deep{
+  nz-carousel{
+    height: 100vh;
+    max-height: 462px;
+  }
+}

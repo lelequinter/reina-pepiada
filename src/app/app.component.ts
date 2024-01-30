@@ -4,7 +4,7 @@ import { Router, RouterModule, RouterOutlet } from '@angular/router';
 import { NzIconModule, NzIconService } from 'ng-zorro-antd/icon';
 import { IconDefinition } from '@ant-design/icons-angular';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
-import { NzMenuDirective, NzMenuModule } from 'ng-zorro-antd/menu';
+import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzAffixModule } from 'ng-zorro-antd/affix';
 import { CrownOutline, HomeOutline, HeartOutline, ShoppingCartOutline, ShopOutline, MenuOutline } from '@ant-design/icons-angular/icons';
 import { routeTransitionAnimations } from './route-transition-animations';
